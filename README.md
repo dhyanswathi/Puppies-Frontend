@@ -1,4 +1,7 @@
 # Puppies-Frontend
+ This is the front end portion of the Puppies full-stack application.
+ 
+
 # Salt React Fullstack - TypeScript Addon
 
 ## Task
