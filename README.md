@@ -1,6 +1,7 @@
 # Puppies-Frontend
  This is the front end portion of the Puppies full-stack application.
- 
+ You can find the backend part of this project here: "https://github.com/dhyanswathi/PuppiesAPI".
+ Clone this repo and run API using 'dotnet run' command before running the frontend part.
 
 # Salt React Fullstack - TypeScript Addon
 
