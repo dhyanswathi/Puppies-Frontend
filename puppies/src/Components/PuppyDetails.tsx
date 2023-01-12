@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { PuppyInfo } from "../types";
 import doodle from '../doodle.png';
+import './PuppyDetails.css';
+import Header from "./Header";
 
 function PuppyDetails() {
     const params  = useParams();
@@ -47,12 +49,15 @@ function PuppyDetails() {
       }
 
     return (
-        <section style={{ backgroundImage: `url(${doodle})` }}>
-            <h2>{puppy.name}</h2>
-            <p>{puppy.breed}</p>
-            <p>{puppy.birthDate}</p>
-            <button id="update-puppy" onClick={updatePuppy}>Update</button>
-            <button id="delete-puppy" onClick={deletePuppy}>Delete</button>
+        <section className="details" style={{ backgroundImage: `url(${doodle})` }}>
+            <Header></Header>
+            <section className="info">
+            <h2>Name: {puppy.name}</h2>
+            <p>Breed: {puppy.breed}</p>
+            <p>Date of birth: {puppy.birthDate}</p>
+            <button id="update-puppy" className="details-button" onClick={updatePuppy}>Update</button>
+            <button id="delete-puppy" className="details-button" onClick={deletePuppy}>Delete</button>
+            </section>
         </section>
     )
 }

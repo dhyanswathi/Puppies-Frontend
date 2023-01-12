@@ -1,0 +1,27 @@
+.details {
+    margin-top: 50px;
+    
+}
+
+.info {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: 100px;
+    min-height: 510px;
+    color: rgb(36, 2, 68);
+    font-size: 40px;
+}
+
+.details-button {
+    border-radius: 25px;
+    width: 20%;
+    height: 40px;
+    font-size: 1.3rem;
+    color: rgb(15, 2, 59);
+    font-weight: 700;
+    background: linear-gradient(90deg, rgb(43, 243, 193) 0%, rgb(192, 212, 244) 100%);
+    border: 0px;
+    cursor: pointer;
+    transition: opacity 0.25s ease-out;
+    margin-bottom: 20px;
+}
