@@ -15,7 +15,7 @@ function Home() {
     }, []);
 
     return (
-        <div className="homePage">
+        <section className="homePage">
             <h1>Hey there! Here is our {puppyData.length} puppies available for adoption!</h1>
             <ul>
                 {
@@ -25,7 +25,7 @@ function Home() {
                             </li>)
                 }
             </ul>
-        </div>
+        </section>
     )
 }
 

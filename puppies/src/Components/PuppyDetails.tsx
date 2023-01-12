@@ -1,5 +1,6 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { PuppyInfo } from "../types";
 
 function PuppyDetails() {
@@ -21,20 +22,37 @@ function PuppyDetails() {
               ...prev,
               name: data.name,
               breed: data.breed,
-              birthDate: data.birthDate
+              birthDate: data.birthDate,
+              puppyId: data.puppyId
             }
           });
         }
         getData();
       },);
+
+      let navigate = useNavigate();
     
+      const updatePuppy = () => {
+        localStorage.setItem("Name", puppy.name);
+        localStorage.setItem("Breed", puppy.breed);
+        localStorage.setItem("BirthDate", puppy.birthDate);
+        localStorage.setItem("Id", puppy.puppyId.toString());
+        navigate("/edit");
+      }
+
+      const deletePuppy = () => {
+        axios.delete(`https://localhost:7220/api/Puppies/${params.id}`);
+        navigate("/");
+      }
 
     return (
-        <div>
+        <section>
             <h2>{puppy.name}</h2>
             <p>{puppy.breed}</p>
             <p>{puppy.birthDate}</p>
-        </div>
+            <button id="update-puppy" onClick={updatePuppy}>Update</button>
+            <button id="delete-puppy" onClick={deletePuppy}>Delete</button>
+        </section>
     )
 }
 

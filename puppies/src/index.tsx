@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PuppyDetails from './Components/PuppyDetails';
+import Edit from './Components/Edit';
+import Add from './Components/Add';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,7 +16,9 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<App/>} />
-    <Route path="/details/:id" element={ <PuppyDetails/> } />
+        <Route path="/edit" element={<Edit/>} />
+        <Route path="/Add" element={<Add/>} />
+        <Route path="/details/:id" element={ <PuppyDetails/> } />
       </Routes>
     </Router>
   </React.StrictMode>
