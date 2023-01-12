@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { PuppyInfo } from "../types";
 
 function Home() {
@@ -15,7 +16,15 @@ function Home() {
 
     return (
         <div className="homePage">
-            <h1>{puppyData.length}</h1>
+            <h1>Hey there! Here is our {puppyData.length} puppies available for adoption!</h1>
+            <ul>
+                {
+                    puppyData.map(puppy => 
+                        <li key={puppy.puppyId}>
+                         <Link to={`/details/${puppy.puppyId}`}>   <h3>{puppy.name}</h3></Link>
+                            </li>)
+                }
+            </ul>
         </div>
     )
 }
