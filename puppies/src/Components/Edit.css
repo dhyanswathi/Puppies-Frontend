@@ -1,0 +1,58 @@
+.add-puppy {
+    min-height: 500px;
+    margin-top: 55px;
+    text-align: center;
+}
+
+.add-puppy h2 {
+    font-size: 30px;
+    color: rgb(7, 13, 135);
+}
+
+.edit {
+    max-width: 500px;
+    min-width: 300px;
+    max-height: 700px;
+    width: 30%;
+    margin: 50px auto;
+    background-color: #e4faf3;
+    border-radius: 5px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
+.edit input {
+    width: 70%;
+    box-sizing: border-box;
+    border: 1px solid rgb(4, 83, 55);
+    border-radius: 5px;
+    font-size: 1.3rem;
+    padding-left: 1.5rem;
+    text-align: center;
+  }
+  
+  .edit label {
+    margin-top: 5px;
+    font-size: 25px;
+    color: rgb(4, 100, 104);
+  }
+
+  .edit button {
+    border-radius: 25px;
+    width: 80%;
+    height: 40px;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 700;
+    background: linear-gradient(90deg, rgb(43, 243, 193) 0%, rgb(81, 143, 242) 100%);
+    border: 0px;
+    cursor: pointer;
+    transition: opacity 0.25s ease-out;
+    margin-bottom: 20px;
+  }
+  
+  .edit button:hover {
+    opacity: 0.8;
+  }

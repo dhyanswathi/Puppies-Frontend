@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { PuppyInfo } from "../types";
+import doodle from '../doodle.png';
 
 function PuppyDetails() {
     const params  = useParams();
@@ -46,7 +47,7 @@ function PuppyDetails() {
       }
 
     return (
-        <section>
+        <section style={{ backgroundImage: `url(${doodle})` }}>
             <h2>{puppy.name}</h2>
             <p>{puppy.breed}</p>
             <p>{puppy.birthDate}</p>

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import doodle from '../doodle.png';
+import Header from "./Header";
+import './Edit.css';
 
 function Edit () {
     const initialContact = {
@@ -23,13 +26,8 @@ function Edit () {
       const Id = localStorage.getItem("Id");
 
       function onSubmit(){
-        axios.put(`https://localhost:7220/api/Puppies/${Id}`, {
-            method: 'PUT',
-            data: {
-                name: info.Name,
-                breed: info.Breed,
-                birthDate: info.BirthDate
-            } 
+        axios.put(`https://localhost:7220/api/Puppies/${Id}?name=${info.Name}&breed=${info.Breed}&birthDate=${info.BirthDate}`, {
+            method: 'PUT'
         }).catch(error => {
             console.log(error)
         });
@@ -39,7 +37,8 @@ function Edit () {
 
     return (
         
-        <section>
+        <section className="add-puppy" style={{ backgroundImage: `url(${doodle})` }}>
+            <Header></Header>
             <h2>Update details of the puppy here!</h2>
             <form className="edit">
             <label htmlFor='name'>Name</label><br/>
